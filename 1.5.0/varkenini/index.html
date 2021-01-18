@@ -309,13 +309,6 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
 </li>
         
           <li class="md-nav__item">
-  <a href="#maxmind-license" class="md-nav__link">
-    MaxMind License
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#global-configuration" class="md-nav__link">
     Global Configuration
   </a>
@@ -672,19 +665,6 @@ We are focusing on lines 2-4 from the code above. If you are hosting Varken on t
 <p><sup>1</sup>: For <code>fallback_ip</code>, you should use your public IP address. According to the <a href="https://wiki.cajun.pro/books/varken/page/breakdown#bkmrk-%5Btautulli-%3Cserver-id">Varken Documentation</a>, the <code>fallback_ip</code> is used for location lookup when there is a failure to determine a location which generally happens when streaming over your local network. You can get your IP address by visiting <a href="https://whatismyipaddress.com/">WhatIsMyIP.com</a>. Note: If you are using a VPN, it will use the location your VPN is connected to.</p>
 <p><sup>2</sup>: You can obtain your Tautulli API key by navigating to your Tautulli instance. Go to <strong>Settings</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"/></svg></span> in upper right &gt; Settings) &gt; <strong>Web Interface</strong> &gt; <strong>API Key</strong>. Replace the "xxxxxxxxxxxxxxxx" with your API key.</p>
 <hr />
-<h3 id="maxmind-license">MaxMind License</h3>
-<p>For Tautulli to work correctly, you need to obtain a MaxMind GeoLite license. This is free to do.</p>
-<ol>
-<li>Sign up for a <a href="https://www.maxmind.com/en/geolite2/signup">MaxMind account</a>. Make sure to verify the account.</li>
-<li>When logged in, click on the <strong>My account</strong> button in the upper right corner as denoted by the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></span> symbol.</li>
-<li>Click on <strong>My License Key</strong> from the left side menu.</li>
-<li>Click on <strong>Generate new license key</strong> button.</li>
-<li>Enter in a description. I suggest "Varken".</li>
-<li>For the prompt under the description asking about using GeoIP Update, select <strong>No</strong>.</li>
-<li>Click <strong>Confirm</strong></li>
-</ol>
-<p>On the next screen, you will be presented with your license key. Keep this page open or copy your key to a safe place. If you close the page, you will not be able to see the key again. If this happens, you can create a new key.</p>
-<hr />
 <h3 id="global-configuration">Global Configuration</h3>
 <p>Now that we have all of our applications set up to use UUD, we need to configure the global configuration.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -754,7 +734,7 @@ We are focusing on lines 2-4 from the code above. If you are hosting Varken on t
 </code></pre></div>
 </td></tr></table>
 <h3 id="final-configuration-file">Final Configuration File</h3>
-<p>When you complete everything above, save the file. Now you can <a href="../install/">start the container</a>.</p>
+<p>When you complete everything above, save the file. Now you can <a href="../install/#start-the-container_1">start the container</a>.</p>
                 
               
               
