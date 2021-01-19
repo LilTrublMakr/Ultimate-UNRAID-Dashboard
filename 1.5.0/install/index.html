@@ -245,6 +245,18 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../" class="md-nav__link">
+      News
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -413,6 +425,26 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
     Install Grafana
   </a>
   
+    <nav class="md-nav" aria-label="Install Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_2" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_2" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -438,14 +470,14 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-container_2" class="md-nav__link">
+  <a href="#docker-container_3" class="md-nav__link">
     Docker Container
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#settings_2" class="md-nav__link">
+  <a href="#settings_3" class="md-nav__link">
     Settings
   </a>
   
@@ -653,6 +685,26 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
     Install Grafana
   </a>
   
+    <nav class="md-nav" aria-label="Install Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_2" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_2" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -678,14 +730,14 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-container_2" class="md-nav__link">
+  <a href="#docker-container_3" class="md-nav__link">
     Docker Container
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#settings_2" class="md-nav__link">
+  <a href="#settings_3" class="md-nav__link">
     Settings
   </a>
   
@@ -1026,6 +1078,44 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
 </code></pre></div>
 <hr />
 <h3 id="install-grafana">Install Grafana</h3>
+<h4 id="docker-container_2">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>Grafana</code> and you should see one from "atribe". Click the install button on the lower left of the card.</p>
+<p><img alt="grafana_01.png" src="../../img/grafana_01.png" /></p>
+<h4 id="settings_2">Settings</h4>
+<p>So there is a setting you need to make sure are correct in this container: <strong>Network Type</strong> needs to be set to <strong>host</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host Port 1</td>
+<td>3000</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Host Path 1</td>
+<td>/mnt/user/appdata/grafana</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Key 1</td>
+<td><em>ip address</em></td>
+<td>Enter in the ip of your server.</td>
+</tr>
+<tr>
+<td>Key 2</td>
+<td><em>enter in password</em></td>
+<td>Enter in the password you would like to use for the admin account.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="grafana_02.png" src="../../img/grafana_02.png" /></p>
 <hr />
 <h3 id="install-tautulli">Install Tautulli</h3>
 <hr />
@@ -1047,10 +1137,11 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
 <p><img alt="maxmind_06.png" src="../../img/maxmind_06.png" /></p>
 <hr />
 <h3 id="install-varken">Install Varken</h3>
-<h4 id="docker-container_2">Docker Container</h4>
+<h4 id="docker-container_3">Docker Container</h4>
 <p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
 <p>In the search bar (upper right), search for <code>Varken</code> and you should see one from "Bander". Click the install button on the lower left of the card.</p>
-<h4 id="settings_2">Settings</h4>
+<p><img alt="varken_07.png" src="../../img/varken_07.png" /></p>
+<h4 id="settings_3">Settings</h4>
 <p>All of the default settings will work. I do advise you to change the time zone to your correct time zone. A list of time zones can be found <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List">here</a>. You would be using the <strong>TZ database name</strong> column.</p>
 <p>Take note of where your config file will be located.</p>
 <div class="admonition error">
@@ -1081,7 +1172,7 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../news/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
