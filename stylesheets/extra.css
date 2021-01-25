@@ -3,10 +3,10 @@
 }
 
 .md-announce a {
-  color: #000;
+  color: #c4c4c4;
 }
 
-:root {
+:root>* {
   --md-admonition-icon--code: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" class="svg-inline--fa fa-code fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>');
 
   --md-default-fg-color:               hsla(0, 0%, 95%, 1);
@@ -21,27 +21,53 @@
   --md-primary-fg-color:               var(--md-default-fg-color);
   --md-primary-bg-color:               var(--md-default-bg-color);
 
-  --md-typeset-color:                var(--md-default-fg-color);
-  --md-typeset-a-color:              hsla(231, 45%, 51%, 1);
+  --md-typeset-color:                  var(--md-default-fg-color);
+  --md-typeset-a-color:                hsla(0, 0%, 95%, 1);
 
-  --md-typeset-del-color:            hsla(6, 90%, 60%, 0.15);
-  --md-typeset-ins-color:            hsla(150, 90%, 44%, 0.15);
+  --md-accent-fg-color:                hsla(27, 100%, 59%, 1);
+  --md-accent-fg-color--transparent:   hsla(27, 100%, 59%, .5);
 
-  --md-typeset-kbd-color:            hsla(0, 0%, 98%, 1);
-  --md-typeset-kbd-accent-color:     hsla(0, 100%, 100%, 1);
-  --md-typeset-kbd-border-color:     hsla(0, 0%, 72%, 1);
+  --md-typeset-del-color:              hsla(6, 90%, 60%, 0.15);
+  --md-typeset-ins-color:              hsla(150, 90%, 44%, 0.15);
 
-  --md-table-bg-color:               var(--md-default-bg-color--lighter);
-  --md-table-border-shadow-color:    var(--md-default-bg-color--lightest);
+  --md-typeset-kbd-color:              hsla(0, 0%, 98%, 1);
+  --md-typeset-kbd-accent-color:       hsla(0, 100%, 100%, 1);
+  --md-typeset-kbd-border-color:       hsla(0, 0%, 72%, 1);
 
-  --md-admonition-fg-color:          var(--md-default-fg-color);
-  --md-admonition-bg-color:          var(--md-default-bg-color--lightest);
+  --md-table-bg-color:                 var(--md-default-bg-color--lighter);
+  --md-table-border-shadow-color:      var(--md-default-bg-color--lightest);
 
-  --md-footer-fg-color:              hsla(0, 0%, 100%, 1);
-  --md-footer-fg-color--light:       hsla(0, 0%, 100%, 0.7);
-  --md-footer-fg-color--lighter:     hsla(0, 0%, 100%, 0.3);
-  --md-footer-bg-color:              hsla(0, 0%, 0%, 0.87);
-  --md-footer-bg-color--dark:        hsla(0, 0%, 0%, 0.32);
+  --md-admonition-fg-color:            var(--md-default-fg-color);
+  --md-admonition-bg-color:            var(--md-default-bg-color);
+
+  --md-footer-fg-color:                hsla(0, 0%, 100%, 1);
+  --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
+  --md-footer-fg-color--lighter:       hsla(0, 0%, 100%, 0.3);
+  --md-footer-bg-color:                hsla(0, 0%, 0%, 0.87);
+  --md-footer-bg-color--dark:          hsla(0, 0%, 0%, 0.32);
+
+  --uud-green:                         hsla(145, 63%, 49%, 1);
+  --uud-red:                           hsla(6, 78%, 57%, 1);
+  --uud-pink:                          hsla(300, 100%, 60%, 1);
+  --uud-purple:                        hsla(283, 39%, 53%, 1);
+  --uud-yellow:                        hsla(48, 89%, 50%, 1);
+  --uud-orange:                        hsla(37, 90%, 51%, 1);
+  --uud-blue:                          hsla(204, 70%, 53%, 1);
+}
+
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+  transition: all .25s ease-in-out;
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  box-shadow: 0 0 0.15rem var(--md-table-border-shadow-color);
 }
 
 .md-typeset .admonition.code,
@@ -63,5 +89,5 @@
 }
 
 .md-typeset table:not([class]) {
-  box-shadow: 0 0.1rem 0.2rem var(--md-table-border-shadow-color), 0 0 0.5rem var(--md-table-border-shadow-color);
+  box-shadow: 0 0 0.15rem var(--md-table-border-shadow-color);
 }
