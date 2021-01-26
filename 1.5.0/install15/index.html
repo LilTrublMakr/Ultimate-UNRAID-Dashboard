@@ -602,6 +602,26 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adding-data-sources" class="md-nav__link">
+    Adding Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telegraf" class="md-nav__link">
+    Telegraf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -981,6 +1001,26 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
   <a href="#configuring-grafana" class="md-nav__link">
     Configuring Grafana
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-data-sources" class="md-nav__link">
+    Adding Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telegraf" class="md-nav__link">
+    Telegraf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1451,6 +1491,62 @@ This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a
 <h4 id="configuring-grafana">Configuring Grafana</h4>
 <p>In the <strong>Docker</strong> tab in unRAID, click on the <strong>Grafana</strong> icon and then select <strong>WebUI</strong>.</p>
 <p>When you are asked to log in, the default user is <ins><strong>admin</strong></ins> and the password is the one you set up while <a href="#settings_2">setting up Grafana</a>.</p>
+<h4 id="adding-data-sources">Adding Data Sources</h4>
+<p>In the left menu, hover over the cog icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg></span>) and then click on <strong>Data Sources</strong>. On the screen that opens up, click on <strong>Add Data Source</strong>.</p>
+<h5 id="telegraf">Telegraf</h5>
+<p>Fill in the settings. If the setting is not in the table below, you can leave it default.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>InfluxDB</td>
+<td>You can name this what you want. I suggest InfluxDB or Telegraf</td>
+</tr>
+<tr>
+<td>Query Language</td>
+<td>InfluxQL</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://localhost:8686</td>
+<td>Set this to the IP address of your server</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>InfluxDB Details</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>telegraf</td>
+<td>Case sensitive</td>
+</tr>
+<tr>
+<td>User</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your username if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your password if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+</tbody>
+</table>
+<p>Click on the <strong>Save &amp; Test</strong> button and make sure you get a green bar just above saying <strong>Data source is working</strong>.</p>
                 
               
               
