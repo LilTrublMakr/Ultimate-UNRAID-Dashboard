@@ -19,6 +19,7 @@
   --md-default-bg-color--lightest:     hsla(0, 0%, 95%, 0.54);
 
   --md-primary-fg-color:               var(--md-default-fg-color);
+  --md-primary-fg-color--dark:         hsla(27, 100%, 59%, 1);
   --md-primary-bg-color:               var(--md-default-bg-color);
 
   --md-typeset-color:                  var(--md-default-fg-color);
@@ -40,21 +41,24 @@
   --md-admonition-fg-color:            var(--md-default-fg-color);
   --md-admonition-bg-color:            var(--md-default-bg-color);
 
-  --md-code-fg-color: hsla(0, 0%, 96%, 1);
-  --md-code-bg-color: hsla(0, 0%, 95%, 0.07);
-  --md-code-hl-color: hsla(60, 100%, 50%, 0.1);
-  --md-code-hl-number-color: hsla(0, 67%, 50%, 1);
-  --md-code-hl-special-color: hsla(340, 83%, 47%, 1);
-  --md-code-hl-function-color: hsla(291, 45%, 50%, 1);
-  --md-code-hl-constant-color: hsla(250, 63%, 60%, 1);
-  --md-code-hl-keyword-color: hsla(219, 54%, 51%, 1);
-  --md-code-hl-string-color: hsla(120, 90%, 28%, 1);
-  --md-code-hl-name-color: var(--md-code-fg-color);
-  --md-code-hl-operator-color: var(--md-default-fg-color--light);
-  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
-  --md-code-hl-comment-color: var(--md-default-fg-color--light);
-  --md-code-hl-generic-color: var(--md-default-fg-color--light);
-  --md-code-hl-variable-color: var(--md-default-fg-color--light);
+  --md-code-fg-color:                  hsla(0, 0%, 0%, 1);
+  /*--md-code-bg-color: hsla(0, 0%, 95%, 0.07);*/
+  --md-code-bg-color:                  hsla(0, 0%, 96%, 1);
+  --md-code-hl-bg-color:               hsla(27, 100%, 59%, 1);
+  --md-code-hl-fg-color:               hsla(0, 0%, 96%, 1);
+  --md-code-hl-color:                  hsla(60, 100%, 50%, 0.5);
+  --md-code-hl-number-color:           hsla(0, 67%, 50%, 1);
+  --md-code-hl-special-color:          hsla(340, 83%, 47%, 1);
+  --md-code-hl-function-color:         hsla(291, 45%, 50%, 1);
+  --md-code-hl-constant-color:         hsla(250, 63%, 60%, 1);
+  --md-code-hl-keyword-color:          hsla(219, 54%, 51%, 1);
+  --md-code-hl-string-color:           hsla(120, 90%, 28%, 1);
+  --md-code-hl-name-color:             var(--md-code-fg-color);
+  --md-code-hl-operator-color:         var(--md-default-fg-color--light);
+  --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
+  --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+  --md-code-hl-generic-color:          var(--md-default-fg-color--light);
+  --md-code-hl-variable-color:         var(--md-default-fg-color--light);
 
   --md-footer-fg-color:                hsla(0, 0%, 100%, 1);
   --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
@@ -81,6 +85,10 @@
   color: var(--md-accent-fg-color);
 }
 
+.md-nav--primary .md-nav__title {
+  color: var(--md-default-bg-color);
+}
+
 .md-typeset .admonition,
 .md-typeset details {
   box-shadow: 0 0 0.15rem var(--md-table-border-shadow-color);
@@ -102,6 +110,16 @@
   background-color: rgb(158,158,158);
   -webkit-mask-image: var(--md-admonition-icon--code);
           mask-image: var(--md-admonition-icon--code);
+}
+
+.codehilitetable .linenos,
+.highlighttable .linenos {
+  background-color: var(--md-code-hl-bg-color);
+}
+
+.codehilitetable .linenodiv pre,
+.highlighttable .linenodiv pre {
+  color: var(--md-code-fg-color);
 }
 
 .md-typeset table:not([class]) {
