@@ -75,6 +75,30 @@
   --uud-blue:                          hsla(204, 70%, 53%, 1);
 }
 
+.md-typeset h1 {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h2 {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h3 {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h4 {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h5 {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h6 {
+  
+}
+
 .md-typeset a {
   color: var(--md-typeset-a-color);
   text-decoration: underline;
