@@ -1,0 +1,949 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unofficial Documentation">
+      
+      
+      
+        <meta name="author" content="falconexe">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Configuring varken.ini - Ultimate UNRAID Dashboard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuring-varkenini" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a href="https://forums.unraid.net/profile/94952-falconexe/">@falconexe</a>. This documentation is currently under development and not released for public use. Please do not reference to it or share it.
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ultimate UNRAID Dashboard" class="md-header__button md-logo" aria-label="Ultimate UNRAID Dashboard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ultimate UNRAID Dashboard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuring varken.ini
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edit on GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ultimate UNRAID Dashboard" class="md-nav__button md-logo" aria-label="Ultimate UNRAID Dashboard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Ultimate UNRAID Dashboard
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edit on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ultimate UNRAID Dashboard
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../questions/" class="md-nav__link">
+        FaQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Version 1.6
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Version 1.6" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Version 1.6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.6/README16.md" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.6/install16.md" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.6/upgrade16.md" class="md-nav__link">
+        Upgrade
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Version 1.5
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Version 1.5" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Version 1.5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README15/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install15/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Version 1.4
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Version 1.4" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Version 1.4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.4.0/install14/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-setup" class="md-nav__link">
+    Application Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-config-file" class="md-nav__link">
+    Create the Config File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influxdb" class="md-nav__link">
+    InfluxDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tautulli" class="md-nav__link">
+    Tautulli
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-configuration" class="md-nav__link">
+    Global Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-configuration-file" class="md-nav__link">
+    Final Configuration File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/edit/master/docs/1.5.0/varkenini.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="configuring-varkenini">Configuring varken.ini</h1>
+<p>This page is to show you how to configure varken.ini to work with Ultimate UNRAID Dashboard.</p>
+<p>The configuration file is broken up in to 2 sections: the global configuration, and the application configuration. You can set up applications and have them not be used in the global configuration.</p>
+<p>Generally, it is easier to set up your applications first so you know what to use for the global configuration.</p>
+<h2 id="application-setup">Application Setup</h2>
+<p>Varken allows to gather metrics for the following applications:</p>
+<ul>
+<li>Sonarr</li>
+<li>Radarr</li>
+<li>Lidarr</li>
+<li>Tautulli</li>
+<li>Ombi</li>
+<li>Sickchill</li>
+<li>Unifi Controller</li>
+</ul>
+<p>The only application we are really worried about for UUD is <strong>Tautulli</strong>. We also want to set Varken up to send the data to <strong>InfluxDB</strong>. If you would like more information on how to set up the other services, please refer to the <a href="https://wiki.cajun.pro/books/varken">Official Varken Documentation</a>.</p>
+<h3 id="create-the-config-file">Create the Config File</h3>
+<p>Navigate to the <strong>appdata</strong> folder of your UNRAID server. The default is <strong>/mnt/usr/appdata/</strong>. You will need to make a <code>Varken</code> folder if one is not created already. The final path should be <strong>/mnt/usr/appdata/Varken</strong>.</p>
+<p>Within that path, create a file called <code>varken.ini</code>, or right click on <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/main/v1.5/varken/varken.ini">this link</a> and click on <strong>Save link as...</strong> and then copy the downloaded file in to your Varken folder.</p>
+<p>Open varken.ini in a text editor. (If you are using Windows, DO NOT USE NOTEPAD. Use something like <a href="https://notepad-plus-plus.org/">Notepad++</a> or <a href="https://code.visualstudio.com/">Visual Studio Code</a>.)</p>
+<p>If you created a blank file, copy and paste the following code in to the file:</p>
+<details class="code" open="open"><summary>Trimmed varken.ini</summary><div class="highlight"><pre><span></span><code>[global]
+sonarr_server_ids = false
+radarr_server_ids = false
+lidarr_server_ids = false
+tautulli_server_ids = 1
+ombi_server_ids = false
+sickchill_server_ids = false
+unifi_server_ids = false
+maxmind_license_key = xxxxxxxxxxxxxxxx
+
+[influxdb]
+url = influxdb.domain.tld
+port = 8086
+ssl = false
+verify_ssl = false
+username = root
+password = root
+
+[tautulli-1]
+url = tautulli.domain.tld:8181
+fallback_ip = 1.1.1.1
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_activity = true
+get_activity_run_seconds = 30
+get_stats = true
+get_stats_run_seconds = 3600
+</code></pre></div>
+</details>
+<p>If you would like to configure more applications, here is the default varken.ini: (Or right click <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/main/v1.5/varken/varken_default.ini">this link</a>, <strong>Save link as...</strong>, and save as <strong>varken.ini</strong>)</p>
+<details class="code"><summary>Default varken.ini</summary><div class="highlight"><pre><span></span><code>[global]
+sonarr_server_ids = 1,2
+radarr_server_ids = 1,2
+lidarr_server_ids = false
+tautulli_server_ids = 1
+ombi_server_ids = 1
+sickchill_server_ids = false
+unifi_server_ids = false
+maxmind_license_key = xxxxxxxxxxxxxxxx
+
+[influxdb]
+url = influxdb.domain.tld
+port = 8086
+ssl = false
+verify_ssl = false
+username = root
+password = root
+
+[tautulli-1]
+url = tautulli.domain.tld:8181
+fallback_ip = 1.1.1.1
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_activity = true
+get_activity_run_seconds = 30
+get_stats = true
+get_stats_run_seconds = 3600
+
+[sonarr-1]
+url = sonarr1.domain.tld:8989
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+missing_days = 7
+missing_days_run_seconds = 300
+future_days = 1
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[sonarr-2]
+url = sonarr2.domain.tld:8989
+apikey = yyyyyyyyyyyyyyyy
+ssl = false
+verify_ssl = false
+missing_days = 7
+missing_days_run_seconds = 300
+future_days = 1
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[radarr-1]
+url = radarr1.domain.tld
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+queue = true
+queue_run_seconds = 300
+get_missing = true
+get_missing_run_seconds = 300
+
+[radarr-2]
+url = radarr2.domain.tld
+apikey = yyyyyyyyyyyyyyyy
+ssl = false
+verify_ssl = false
+queue = true
+queue_run_seconds = 300
+get_missing = true
+get_missing_run_seconds = 300
+
+[lidarr-1]
+url = lidarr1.domain.tld:8686
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+missing_days = 30
+missing_days_run_seconds = 300
+future_days = 30
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[ombi-1]
+url = ombi.domain.tld
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_request_type_counts = true
+request_type_run_seconds = 300
+get_request_total_counts = true
+request_total_run_seconds = 300
+get_issue_status_counts = true
+issue_status_run_seconds = 300
+
+[sickchill-1]
+url = sickchill.domain.tld:8081
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_missing = true
+get_missing_run_seconds = 300
+
+[unifi-1]
+url = unifi.domain.tld:8443
+username = ubnt
+password = ubnt
+site = default
+usg_name = MyRouter
+ssl = false
+verify_ssl = false
+get_usg_stats_run_seconds = 300
+</code></pre></div>
+</details>
+<h3 id="influxdb">InfluxDB</h3>
+<p>The code block we are interested in for InfluxDB is the following:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>[influxdb]
+<span class="hll">    url = influxdb.domain.tld
+</span>    port = 8086
+    ssl = false
+    verify_ssl = false
+    username = root
+    password = root
+</code></pre></div>
+</td></tr></table>
+<p>We are focusing mainly on line 2 from the code above. You want to enter in the ip address of your IDB instance. If you are running everything on the same machine, you should be able to use <code>localhost</code> or <code>127.0.0.1</code> for the IP address.</p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><mark>2</mark></td>
+<td><mark><em>IP</em></mark></td>
+<td><mark>Change to the IP address of your IDB instance</mark></td>
+</tr>
+<tr>
+<td>3</td>
+<td>8086</td>
+<td>Change to your IDB port. 8086 is default.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>root</td>
+<td>If you have IDB set up with authentication, you put the username here. <a href="../install15/#authentication">More Info</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>root</td>
+<td>If you have IDB set up with authentication, you put the password here. <a href="../install15/#authentication">More Info</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="tautulli">Tautulli</h3>
+<p>The next block we are going to take a look at is the <code>tautulli-1</code> block:</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [tautulli-1]
+<span class="hll">    url = tautulli.domain.tld:8181
+</span><span class="hll">    fallback_ip = 1.1.1.1
+</span><span class="hll">    apikey = xxxxxxxxxxxxxxxx
+</span>    ssl = false
+    verify_ssl = false
+    get_activity = true
+    get_activity_run_seconds = 30
+    get_stats = true
+    get_stats_run_seconds = 3600
+</code></pre></div>
+</td></tr></table>
+We are focusing on lines 2-4 from the code above. If you are hosting Varken on the same computer that you are hosting Tautulli on, you should be able to use <code>localhost</code> or <code>127.0.0.1</code> for the IP address.</p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Input</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><mark>2</mark></td>
+<td><mark>url</mark></td>
+<td><mark><em>IP:port</em></mark></td>
+<td><mark>Change to the IP address and port of your Tautulli instance. Default port is 8181</mark></td>
+</tr>
+<tr>
+<td><mark>3</mark></td>
+<td><mark>fallback_ip</mark></td>
+<td><mark><em>Your public IP</em></mark></td>
+<td><mark>You should change this to your public IP address.<sup>1</sup></mark></td>
+</tr>
+<tr>
+<td><mark>4</mark></td>
+<td><mark>apikey</mark></td>
+<td><mark><em>Enter API key</em></mark></td>
+<td><mark>Enter in your Tautulli API key<sup>2</sup>. Replace all the x's</mark></td>
+</tr>
+<tr>
+<td>5</td>
+<td>ssl</td>
+<td>false</td>
+<td>Set to true if you are using SSL to access Tautulli. If you are using it over a local network, you can leave this false.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>verify_ssl</td>
+<td>false</td>
+<td>Set to true if you are using SSL to access Tautulli. If you are using it over a local network, you can leave this false.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>get_activity</td>
+<td>true</td>
+<td>Pull stream information from Tautulli.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>get_activity_run_seconds</td>
+<td>30</td>
+<td>How often in seconds to pull activity from Tautulli.<br />Default = 30</td>
+</tr>
+<tr>
+<td>9</td>
+<td>get_stats</td>
+<td>true</td>
+<td>Pull library information from Tautulli.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>get_stats_run_seconds</td>
+<td>3600</td>
+<td>How often in seconds to pull stats from Tautulli.<br />Default = 3600 (5 min)</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>: For <code>fallback_ip</code>, you should use your public IP address. According to the <a href="https://wiki.cajun.pro/books/varken/page/breakdown#bkmrk-%5Btautulli-%3Cserver-id">Varken Documentation</a>, the <code>fallback_ip</code> is used for location lookup when there is a failure to determine a location which generally happens when streaming over your local network. You can get your IP address by visiting <a href="https://whatismyipaddress.com/">WhatIsMyIP.com</a>. Note: If you are using a VPN, it will use the location your VPN is connected to.</p>
+<p><sup>2</sup>: You can obtain your Tautulli API key by navigating to your Tautulli instance. Go to <strong>Settings</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"/></svg></span> in upper right &gt; Settings) &gt; <strong>Web Interface</strong> &gt; <strong>API Key</strong>. Replace the "xxxxxxxxxxxxxxxx" with your API key.</p>
+<hr />
+<h3 id="global-configuration">Global Configuration</h3>
+<p>Now that we have all of our applications set up to use UUD, we need to configure the global configuration.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [global]
+    sonarr_server_ids = 1,2
+    radarr_server_ids = 1,2
+    lidarr_server_ids = false
+<span class="hll">    tautulli_server_ids = 1
+</span>    ombi_server_ids = 1
+    sickchill_server_ids = false
+    unifi_server_ids = false
+<span class="hll">    maxmind_license_key = xxxxxxxxxxxxxxxx
+</span></code></pre></div>
+</td></tr></table>
+<p>The two lines we are focusing on are lines 5 and 9. </p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Input</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>tautulli_server_ids</td>
+<td>1</td>
+<td>We can leave this line alone</td>
+</tr>
+<tr>
+<td>9</td>
+<td>maxmind_license_key</td>
+<td><em>MaxMind license key</em></td>
+<td>Enter in the MaxMind license key that you obtained in <a href="../install15/#obtain-maxminddb-key">#Obtain MaxMindDB License Key</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>For the rest of the settings, we need to disable the rest of the services unless you have set them up.</p>
+<p>To disable the rest of the services, replace all of the numbers following them with <strong><code>false</code></strong>.</p>
+<p>In the end, your global configuration should look along the lines of:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [global]
+    sonarr_server_ids = false
+    radarr_server_ids = false
+    lidarr_server_ids = false
+    tautulli_server_ids = 1
+    ombi_server_ids = false
+    sickchill_server_ids = false
+    unifi_server_ids = false
+    maxmind_license_key = xxxxxxxxxxxxxxxx
+</code></pre></div>
+</td></tr></table>
+<h3 id="final-configuration-file">Final Configuration File</h3>
+<p>When you complete everything above, save the file. Now you can <a href="../install15/#start-the-container_1">start the container</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; falconexe
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://forums.unraid.net/topic/96895-ultimate-unraid-dashboard-uud/" target="_blank" rel="noopener" title="UNRAID Forum Topic" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M532 386.2c27.5-27.1 44-61.1 44-98.2 0-80-76.5-146.1-176.2-157.9C368.3 72.5 294.3 32 208 32 93.1 32 0 103.6 0 192c0 37 16.5 71 44 98.2-15.3 30.7-37.3 54.5-37.7 54.9-6.3 6.7-8.1 16.5-4.4 25 3.6 8.5 12 14 21.2 14 53.5 0 96.7-20.2 125.2-38.8 9.2 2.1 18.7 3.7 28.4 4.9C208.1 407.6 281.8 448 368 448c20.8 0 40.8-2.4 59.8-6.8C456.3 459.7 499.4 480 553 480c9.2 0 17.5-5.5 21.2-14 3.6-8.5 1.9-18.3-4.4-25-.4-.3-22.5-24.1-37.8-54.8zm-392.8-92.3L122.1 305c-14.1 9.1-28.5 16.3-43.1 21.4 2.7-4.7 5.4-9.7 8-14.8l15.5-31.1L77.7 256C64.2 242.6 48 220.7 48 192c0-60.7 73.3-112 160-112s160 51.3 160 112-73.3 112-160 112c-16.5 0-33-1.9-49-5.6l-19.8-4.5zM498.3 352l-24.7 24.4 15.5 31.1c2.6 5.1 5.3 10.1 8 14.8-14.6-5.1-29-12.3-43.1-21.4l-17.1-11.1-19.9 4.6c-16 3.7-32.5 5.6-49 5.6-54 0-102.2-20.1-131.3-49.7C338 339.5 416 272.9 416 192c0-3.4-.4-6.7-.7-10C479.7 196.5 528 238.8 528 288c0 28.7-16.2 50.6-29.7 64z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>
