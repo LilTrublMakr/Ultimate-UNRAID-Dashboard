@@ -1,0 +1,2214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unofficial Documentation">
+      
+      
+      
+        <meta name="author" content="falconexe">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Install - Ultimate UNRAID Dashboard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-ultimate-unraid-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+This is unofficial documentation for the Ultimate UNRAID Dashboard project by <a href="https://forums.unraid.net/profile/94952-falconexe/">@falconexe</a>. This documentation is currently under development and not released for public use. Please do not reference to it or share it.
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ultimate UNRAID Dashboard" class="md-header__button md-logo" aria-label="Ultimate UNRAID Dashboard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ultimate UNRAID Dashboard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edit on GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ultimate UNRAID Dashboard" class="md-nav__button md-logo" aria-label="Ultimate UNRAID Dashboard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Ultimate UNRAID Dashboard
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edit on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ultimate UNRAID Dashboard
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../questions/" class="md-nav__link">
+        FaQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Version 1.5
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Version 1.5" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Version 1.5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README15/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Install
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guide" class="md-nav__link">
+    Guide
+  </a>
+  
+    <nav class="md-nav" aria-label="Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-community-applications" class="md-nav__link">
+    Install Community Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-influxdb" class="md-nav__link">
+    Install InfluxDB
+  </a>
+  
+    <nav class="md-nav" aria-label="Install InfluxDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-container" class="md-nav__link">
+    Start Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-telegraf" class="md-nav__link">
+    Install Telegraf
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Telegraf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_1" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_1" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-runudev" class="md-nav__link">
+    Adding /run/udev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegrafconf" class="md-nav__link">
+    telegraf.conf
+  </a>
+  
+    <nav class="md-nav" aria-label="telegraf.conf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-config-file" class="md-nav__link">
+    Default Config File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edited-config-file" class="md-nav__link">
+    Edited Config File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-grafana" class="md-nav__link">
+    Install Grafana
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_2" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_2" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_1" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-tautulli" class="md-nav__link">
+    Install Tautulli
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Tautulli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_3" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_3" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_2" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-the-tautulli-setup" class="md-nav__link">
+    Complete the Tautulli Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-the-tautulli-api-key" class="md-nav__link">
+    Obtain the Tautulli API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-maxminddb-key" class="md-nav__link">
+    Obtain MaxMindDB Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-varken" class="md-nav__link">
+    Install Varken
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Varken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_4" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_4" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varkenini" class="md-nav__link">
+    varken.ini
+  </a>
+  
+    <nav class="md-nav" aria-label="varken.ini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-setup" class="md-nav__link">
+    Application Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-config-file" class="md-nav__link">
+    Create the Config File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influxdb" class="md-nav__link">
+    InfluxDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tautulli" class="md-nav__link">
+    Tautulli
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-configuration" class="md-nav__link">
+    Global Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-configuration-file" class="md-nav__link">
+    Final Configuration File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_3" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ultimate-unriad-dashboard" class="md-nav__link">
+    Ultimate UNRIAD Dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Ultimate UNRIAD Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-grafana" class="md-nav__link">
+    Configuring Grafana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-data-sources" class="md-nav__link">
+    Adding Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telegraf" class="md-nav__link">
+    Telegraf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varken" class="md-nav__link">
+    Varken
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-uud" class="md-nav__link">
+    Uploading UUD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Version 1.4
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Version 1.4" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Version 1.4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.4.0/install14/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guide" class="md-nav__link">
+    Guide
+  </a>
+  
+    <nav class="md-nav" aria-label="Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-community-applications" class="md-nav__link">
+    Install Community Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-influxdb" class="md-nav__link">
+    Install InfluxDB
+  </a>
+  
+    <nav class="md-nav" aria-label="Install InfluxDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-container" class="md-nav__link">
+    Start Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-telegraf" class="md-nav__link">
+    Install Telegraf
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Telegraf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_1" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_1" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-runudev" class="md-nav__link">
+    Adding /run/udev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegrafconf" class="md-nav__link">
+    telegraf.conf
+  </a>
+  
+    <nav class="md-nav" aria-label="telegraf.conf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-config-file" class="md-nav__link">
+    Default Config File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edited-config-file" class="md-nav__link">
+    Edited Config File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-grafana" class="md-nav__link">
+    Install Grafana
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_2" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_2" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_1" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-tautulli" class="md-nav__link">
+    Install Tautulli
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Tautulli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_3" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_3" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_2" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-the-tautulli-setup" class="md-nav__link">
+    Complete the Tautulli Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-the-tautulli-api-key" class="md-nav__link">
+    Obtain the Tautulli API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-maxminddb-key" class="md-nav__link">
+    Obtain MaxMindDB Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-varken" class="md-nav__link">
+    Install Varken
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Varken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-container_4" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_4" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varkenini" class="md-nav__link">
+    varken.ini
+  </a>
+  
+    <nav class="md-nav" aria-label="varken.ini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-setup" class="md-nav__link">
+    Application Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-config-file" class="md-nav__link">
+    Create the Config File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influxdb" class="md-nav__link">
+    InfluxDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tautulli" class="md-nav__link">
+    Tautulli
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-configuration" class="md-nav__link">
+    Global Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-configuration-file" class="md-nav__link">
+    Final Configuration File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container_3" class="md-nav__link">
+    Start the Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ultimate-unriad-dashboard" class="md-nav__link">
+    Ultimate UNRIAD Dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Ultimate UNRIAD Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-grafana" class="md-nav__link">
+    Configuring Grafana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-data-sources" class="md-nav__link">
+    Adding Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telegraf" class="md-nav__link">
+    Telegraf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varken" class="md-nav__link">
+    Varken
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-uud" class="md-nav__link">
+    Uploading UUD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/edit/master/docs/1.5.0/install15.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="install-ultimate-unraid-dashboard">Install Ultimate unRAID Dashboard</h1>
+<p>This guide will show you how to setup UUD on your unRAID Server. While it does show how to set up most services to get you started with Grafana and UUD, it does assume that you have Plex and supporting applications set up already. This includes, but is not limited to, Plex Media Server, Sonarr, Radarr, and/or Ombi.</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>unRAID Plugin: Community Applications</li>
+<li>Docker: InfluxDB</li>
+<li>Docker: Telegraf</li>
+<li>Docker: Grafana</li>
+<li>Docker: Tautulli</li>
+<li>Docker: Varken</li>
+<li>CA Plugin: IPMI Tools</li>
+<li>License: GeoLite2</li>
+</ul>
+<h2 id="guide">Guide</h2>
+<h3 id="install-community-applications">Install Community Applications</h3>
+<p>This is a must have for any unRAID Server. If you already have Community Applications (CA) installed, you can skip to the next step.</p>
+<p>On your unRAID server, click on the <strong>Plugins</strong> tab on your toolbar. You should see a option <strong>Enter URL of remote plugin file or local plugin file</strong>. </p>
+<p>Enter <code>https://raw.githubusercontent.com/Squidly271/community.applications/master/plugins/community.applications.plg</code> and click on the <strong>Install</strong> button.</p>
+<p>You should now see an <strong>Apps</strong> tab on your toolbar.</p>
+<hr />
+<h3 id="install-influxdb">Install InfluxDB</h3>
+<h4 id="docker-container">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>InfluxDB</code> and you should see one from "atribe". Click the install button on the lower left of the card.</p>
+<p><img alt="influx_01.png" src="../../img/influx_01.png" /></p>
+<h4 id="settings">Settings</h4>
+<p>All of the default settings will be fine though you can customize as you see fit.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host Port 1</td>
+<td>8083</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Port 2</td>
+<td>8086</td>
+<td>This is the port that you will use to access the database</td>
+</tr>
+<tr>
+<td>Host Path 1</td>
+<td>/mnt/user/appdata/influxdb</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="influx_02.png" src="../../img/influx_02.png" /></p>
+<h4 id="start-container">Start Container</h4>
+<p>Click <strong>Apply</strong> and make sure the container was set up successfully.</p>
+<h4 id="authentication">Authentication</h4>
+<p>By default, InfluxDB has authentication disabled. This means that any application will be able to write data to InfluxDB using any set of credentials. If you would like to set up user authentication, please refer to the <a href="https://docs.influxdata.com/"><strong><em>influx</em></strong>data documentation</a>.</p>
+<hr />
+<h3 id="install-telegraf">Install Telegraf</h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This container needs a config file before being set up. Please read these instruction carefully as you will have problems if you do not follow the order of operations.</p>
+</div>
+<h4 id="docker-container_1">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>Telegraf</code> and you should see one from "atribe". Click the install button on the lower left of the card.</p>
+<p><img alt="telegraf_01.png" src="../../img/telegraf_01.png" /></p>
+<h4 id="settings_1">Settings</h4>
+<p>So there is a setting you need to make sure are correct in this container: <strong>Network Type</strong> needs to be set to <strong>host</strong>.</p>
+<p><mark><strong>DO NOT HIT 'Apply' YET!</strong></mark></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repository</td>
+<td>telegraf:latest</td>
+<td>You can use the alpine tag, but it is recommended to use latest</td>
+</tr>
+<tr>
+<td>Post Arguments</td>
+<td><code>/bin/sh -c 'apt update &amp;&amp; apt install -y smartmontools &amp;&amp; apt install -y lm-sensors &amp;&amp; apt install -y nvme-cli &amp;&amp; apt install -y ipmitool &amp;&amp; telegraf'</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Network Type</td>
+<td><mark><ins><strong>host</strong></ins></mark></td>
+<td><mark>IT IS IMPORTANT THAT YOU USE HOST!</mark></td>
+</tr>
+<tr>
+<td>Host Path 1</td>
+<td>/var/run/utmp</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 2</td>
+<td>/var/run/docker.sock</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 3</td>
+<td>/</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 4</td>
+<td>/sys</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 5</td>
+<td>/etc</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 6</td>
+<td>/proc</td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path 7</td>
+<td>/mnt/user/appdata/telegraf/telegraf.conf</td>
+<td><mark>Make note of this directory. We will need it in the next step.</mark></td>
+</tr>
+<tr>
+<td>Host Path 8</td>
+<td>/run/udev</td>
+<td>If this is not here, follow the <a href="#adding-runudev">instructions below</a> to add this.</td>
+</tr>
+<tr>
+<td>Key 1</td>
+<td>/rootfs/proc</td>
+<td></td>
+</tr>
+<tr>
+<td>Key 2</td>
+<td>/rootfs/sys</td>
+<td></td>
+</tr>
+<tr>
+<td>Key 3</td>
+<td>/rootfs/etc</td>
+<td></td>
+</tr>
+<tr>
+<td>Key 4</td>
+<td>/rootfs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition error">
+<p class="admonition-title">Warning</p>
+<p>DO NOT HIT APPLY TO START THE CONTAINER YET! We need to set up the configuration file first!</p>
+</div>
+<h4 id="adding-runudev">Adding /run/udev</h4>
+<p>If you do not have this in your variables, scroll to the bottom of the page and find the <strong>+ Add another Path, Port, Variable, Label or Device</strong> link just above the <strong>Apply</strong>, <strong>Done</strong>, and <strong>Save</strong> buttons.</p>
+<p><img alt="telegraf_03.png" src="../../img/telegraf_03.png" /></p>
+<p>In the windows that pops up, enter in the following:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Config Type</td>
+<td>Path</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><em>enter in name or leave blank</em></td>
+<td>You can leave this blank if you wish</td>
+</tr>
+<tr>
+<td>Container Path</td>
+<td><code>/run/udev</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Host Path</td>
+<td><code>/run/udev</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>/run/udev</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Access Mode</td>
+<td>Read/Write</td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><em>Leave blank</em></td>
+<td></td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Always</td>
+<td></td>
+</tr>
+<tr>
+<td>Required</td>
+<td>Yes</td>
+<td>It will be filled in already so you can leave it on no if you want to.</td>
+</tr>
+<tr>
+<td>Password Mask</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="telegraf_04.png" src="../../img/telegraf_04.png" /></p>
+<p>Click on the <strong>ADD</strong> button.</p>
+<div class="admonition error">
+<p class="admonition-title">Warning</p>
+<p>DO NOT HIT APPLY TO START THE CONTAINER YET! We need to set up the configuration file first!</p>
+</div>
+<h4 id="telegrafconf">telegraf.conf</h4>
+<p>In your settings, you should have noted a path in the previous step for <strong>Host Path 7</strong>. You need to navigate to that folder (you will probably have to create the telegraf folder) and place a <strong>telegraf.conf</strong> file in that folder.</p>
+<h5 id="default-config-file">Default Config File</h5>
+<p>You can find a default <code>telegraf.conf</code> on the official <a href="https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf">Telegraf GitHub</a>. <a href="https://raw.githubusercontent.com/influxdata/telegraf/master/etc/telegraf.conf">Raw version</a>.</p>
+<p>If you want to edit the default config, here are the edits you need to make:</p>
+<ul>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.net]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+</ul>
+</li>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.docker]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+</ul>
+</li>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.diskio]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+<li>To use static drive serial numbers in Grafana (for DiskIO queries) do the following:<ul>
+<li>Edit <span style="color: var(--uud-green)"><strong>telegraf.conf</strong></span> &gt; <span style="color: var(--uud-green)"><strong>[[inputs.diskio]]</strong></span> &gt; uncomment the line (remove the #) with <span style="color: var(--uud-green)"><strong>device_tags = ["ID_SERIAL"]</strong></span>. Use <span style="color: var(--uud-orange)"><strong>ID_SERIAL</strong></span> flag in Grafana.</li>
+<li>Now upon booting, you don't have to worry about SD mounts changing.</li>
+<li>You can also set up overrides on the query fields map the serial number to a common disk name like "disk01", etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.smart]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+<li>Also enable <span style="color: var(--uud-green)"><strong>attributes = true</strong></span> by removing the <code>#</code> in the front of the line.</li>
+</ul>
+</li>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.ipmi_sensor]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+</ul>
+</li>
+<li>Search for <span style="color: var(--uud-blue)"><strong>[[inputs.apcupsd]]</strong></span><ul>
+<li>Enable by removing the <code>#</code> in the front of the line.</li>
+<li>In unRAID settings &gt; UPS Settings, make sure <strong>Start APC UPS daemon</strong> is set to <code>Yes</code>.</li>
+</ul>
+</li>
+</ul>
+<p>When completed, this file should be placed in the folder that we noted above. (Default is <strong>/mnt/user/appdata/telegraf/</strong>). </p>
+<p><a href="#start-the-container">Continue to the next step</a>.</p>
+<h5 id="edited-config-file">Edited Config File</h5>
+<p>If you want to just get up and running, you can download an already edited config file from this <a href="https://github.com/LilTrublMakr/Ultimate-unRAID-Dashboard/blob/main/v1.5/telegraf/telegraf.conf">GitHub Repository</a>. <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-unRAID-Dashboard/main/v1.5/telegraf/telegraf.conf">Raw link</a>.</p>
+<p>This file should be placed in the folder that we noted above. (Default is <strong>/mnt/user/appdata/telegraf/</strong>).</p>
+<p><a href="#start-the-container">Continue to the next step</a>.</p>
+<h4 id="start-the-container">Start the Container</h4>
+<p>Now, we can finally start the container. Click on <strong>Apply</strong> to start the container.</p>
+<p>When you are back on the Docker tab of unRAID, click on the logs button on the far right side of the Telegraf container to open the container logs.</p>
+<p><img alt="telegraf_05.png" src="../../img/telegraf_05.png" /></p>
+<p>You are waiting for the container to start up fully. You should see something along the lines of:</p>
+<div class="highlight"><pre><span></span><code>2021-01-13T14:21:36Z I! Starting Telegraf 1.17.0
+2021-01-13T14:21:36Z I! Using config file: /etc/telegraf/telegraf.conf
+</code></pre></div>
+<hr />
+<h3 id="install-grafana">Install Grafana</h3>
+<h4 id="docker-container_2">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>Grafana</code> and you should see one from "atribe". Click the install button on the lower left of the card.</p>
+<p><img alt="grafana_01.png" src="../../img/grafana_01.png" /></p>
+<h4 id="settings_2">Settings</h4>
+<p>So there is a setting you need to make sure are correct in this container: <strong>Network Type</strong> needs to be set to <strong>host</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host Port 1</td>
+<td>3000</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Host Path 1</td>
+<td>/mnt/user/appdata/grafana</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Key 1</td>
+<td><em>ip address</em></td>
+<td>Enter in the ip of your server.</td>
+</tr>
+<tr>
+<td>Key 2</td>
+<td><em>enter in password</em></td>
+<td>Enter in the password you would like to use for the admin account.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="grafana_02.png" src="../../img/grafana_02.png" /></p>
+<h4 id="start-the-container_1">Start the Container</h4>
+<p>Click <strong>Apply</strong> to start the container.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you do not care about the media portion of UUD, you can skip the rest of this guide. I would recommend you download UUD 1.4. It has everything this dashboard has but the media monitoring. You can find more information about UUD 1.4 <a href="">here</a>.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">TODO</p>
+<p>1.4 link</p>
+</div>
+<hr />
+<h3 id="install-tautulli">Install Tautulli</h3>
+<h4 id="docker-container_3">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>Tautulli</code>. There are actually multiple versions: linuxserver, official, and hotio. While any of them should work, I will be using the one from "linuxserver".</p>
+<p><img alt="tautulli_01.png" src="../../img/tautulli_01.png" /></p>
+<h4 id="settings_3">Settings</h4>
+<p>Default settings will work.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host Port 1</td>
+<td>8181</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Host Path 1</td>
+<td>/mnt/user/appdata/tautulli/logs/</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Key 1</td>
+<td>99</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>Key 2</td>
+<td>100</td>
+<td>You can leave this default</td>
+</tr>
+<tr>
+<td>AppData Config Path</td>
+<td>/mnt/user/appdata/tautulli/config/</td>
+<td>This is found under "Show more settings"</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="tautulli_04.png" src="../../img/tautulli_04.png" /></p>
+<h4 id="start-the-container_2">Start the Container</h4>
+<p>Click <strong>Apply</strong> to start the container.</p>
+<h4 id="complete-the-tautulli-setup">Complete the Tautulli Setup</h4>
+<p>Click on the <strong>Docker</strong> tab of unRAID. Left click on the Tautulli icon and click on <strong>Web UI</strong>.</p>
+<p>On the Welcome screen, click on <strong>Next</strong>.</p>
+<p>On the Authentication screen, set the username and password you would like to use to access the administration panel of Tautulli.</p>
+<p>On the Plex Account screen, click the <strong>Sign In with Plex</strong> button. After you authenticate with your Plex account, click the <strong>Next</strong> button</p>
+<p>On the Plex Media Server screen, select your Plex server that has the internal IP. It should start with 172.x.x.x. Fill in the rest of the options as appropriate. Click on the <strong>Verify</strong> button. You should see next to it <strong>Server found!</strong> Click the <strong>Next</strong> button.</p>
+<p>On the Activity Logging page, adjust to your <strong>Ignore Interval</strong> to your liking. Click the <strong>Next</strong> button.</p>
+<p>For the next two screens, click on the <strong>Next</strong> button.</p>
+<p>Finally, click on the <strong>Finish</strong> button.</p>
+<h4 id="obtain-the-tautulli-api-key">Obtain the Tautulli API Key</h4>
+<p>When you are on the main window of Tautulli, click on the cogs icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"/></svg></span>) in the upper right corner &gt; <strong>settings</strong> &gt; <strong>Web Interface</strong>.</p>
+<p>Near the bottom of that page, you should see a section for your <strong>API</strong>. Either keep this page open, or copy your API key to a text document to use in the <a href="#install_varken">Varken Setup</a>.</p>
+<p><img alt="tautulli_05.png" src="../../img/tautulli_05.png" /></p>
+<hr />
+<h3 id="obtain-maxminddb-key">Obtain MaxMindDB Key</h3>
+<p>For Tautulli to work correctly, you need to obtain a MaxMind GeoLite license. This is free to do.</p>
+<p>1: Sign up for a <a href="https://www.maxmind.com/en/geolite2/signup">MaxMind account</a>. Make sure to verify the account.</p>
+<p><img alt="maxmind_01.png" src="../../img/maxmind_01.png" /></p>
+<p>2: When logged in, click on the <strong>My account</strong> button in the upper right corner as denoted by the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></span> symbol and click on <strong>MY ACCOUNT</strong>.</p>
+<p><img alt="maxmind_02.png" src="../../img/maxmind_02.png" /></p>
+<p>3: Click on <strong>My License Key</strong> from the left side menu.</p>
+<p><img alt="maxmind_03.png" src="../../img/maxmind_03.png" /></p>
+<p>4: Click on <strong>Generate new license key</strong> button.</p>
+<p><img alt="maxmind_04.png" src="../../img/maxmind_04.png" /></p>
+<p>5: Enter in a description. I suggest "Varken".</p>
+<p>6: For the prompt under the description asking about using GeoIP Update, select <strong>No</strong>.</p>
+<p><img alt="maxmind_05.png" src="../../img/maxmind_05.png" /></p>
+<p>7: Click <strong>Confirm</strong>.</p>
+<p>On the next screen, you will be presented with your license key. Keep this page open for the next step or copy your key to a safe place. If you close the page, you will not be able to see the key again. If this happens, you can create a new key.</p>
+<p><img alt="maxmind_06.png" src="../../img/maxmind_06.png" /></p>
+<hr />
+<h3 id="install-varken">Install Varken</h3>
+<h4 id="docker-container_4">Docker Container</h4>
+<p>Click on the <strong>Apps</strong> tab in the toolbar.</p>
+<p>In the search bar (upper right), search for <code>Varken</code> and you should see one from "Bander". Click the install button on the lower left of the card.</p>
+<p><img alt="varken_07.png" src="../../img/varken_07.png" /></p>
+<h4 id="settings_4">Settings</h4>
+<p>All of the default settings will work. I do advise you to change the time zone to your correct time zone. A list of time zones can be found <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List">here</a>. You would be using the <strong>TZ database name</strong> column.</p>
+<p>Take note of where your config file will be located.</p>
+<div class="admonition error">
+<p class="admonition-title">Warning</p>
+<p>DO NOT HIT APPLY TO START THE CONTAINER YET! We need to set up the configuration file first!</p>
+</div>
+<h4 id="varkenini">varken.ini</h4>
+<p>You need to edit the configuration yourself since it requires API keys. You can find the default varken.ini file on <a href="https://github.com/LilTrublMakr/Ultimate-unRAID-Dashboard/blob/main/v1.5/varken/varken.ini">GitHub</a> (<a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-unRAID-Dashboard/main/v1.5/varken/varken.ini">Raw version</a>).</p>
+<p>The configuration file is broken up in to 2 sections: the global configuration, and the application configuration. You can set up applications and have them not be used in the global configuration.</p>
+<p>Generally, it is easier to set up your applications first so you know what to use for the global configuration.</p>
+<h5 id="application-setup">Application Setup</h5>
+<p>Varken allows to gather metrics for the following applications:</p>
+<ul>
+<li>Sonarr</li>
+<li>Radarr</li>
+<li>Lidarr</li>
+<li>Tautulli</li>
+<li>Ombi</li>
+<li>Sickchill</li>
+<li>Unifi Controller</li>
+</ul>
+<p>The only application we are really worried about for UUD is <strong>Tautulli</strong>. We also want to set Varken up to send the data to <strong>InfluxDB</strong>. If you would like more information on how to set up the other services, please refer to the <a href="https://wiki.cajun.pro/books/varken">Official Varken Documentation</a>.</p>
+<h6 id="create-the-config-file">Create the Config File</h6>
+<p>Navigate to the <strong>appdata</strong> folder of your UNRAID server. The default is <strong>/mnt/usr/appdata/</strong>. You will need to make a <code>Varken</code> folder if one is not created already. The final path should be <strong>/mnt/usr/appdata/Varken</strong>.</p>
+<p>Within that path, create a file called <code>varken.ini</code>, or right click on <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/main/v1.5/varken/varken.ini">this link</a> and click on <strong>Save link as...</strong> and then copy the downloaded file in to your Varken folder.</p>
+<p>Open varken.ini in a text editor. (If you are using Windows, DO NOT USE NOTEPAD. Use something like <a href="https://notepad-plus-plus.org/">Notepad++</a> or <a href="https://code.visualstudio.com/">Visual Studio Code</a>.)</p>
+<p>If you created a blank file, copy and paste the following code in to the file:</p>
+<details class="code" open="open"><summary>Trimmed varken.ini</summary><div class="highlight"><pre><span></span><code>[global]
+sonarr_server_ids = false
+radarr_server_ids = false
+lidarr_server_ids = false
+tautulli_server_ids = 1
+ombi_server_ids = false
+sickchill_server_ids = false
+unifi_server_ids = false
+maxmind_license_key = xxxxxxxxxxxxxxxx
+
+[influxdb]
+url = influxdb.domain.tld
+port = 8086
+ssl = false
+verify_ssl = false
+username = root
+password = root
+
+[tautulli-1]
+url = tautulli.domain.tld:8181
+fallback_ip = 1.1.1.1
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_activity = true
+get_activity_run_seconds = 30
+get_stats = true
+get_stats_run_seconds = 3600
+</code></pre></div>
+</details>
+<p>If you would like to configure more applications, here is the default varken.ini: (Or right click <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/main/v1.5/varken/varken_default.ini">this link</a>, <strong>Save link as...</strong>, and save as <strong>varken.ini</strong>)</p>
+<details class="code"><summary>Default varken.ini</summary><div class="highlight"><pre><span></span><code>[global]
+sonarr_server_ids = 1,2
+radarr_server_ids = 1,2
+lidarr_server_ids = false
+tautulli_server_ids = 1
+ombi_server_ids = 1
+sickchill_server_ids = false
+unifi_server_ids = false
+maxmind_license_key = xxxxxxxxxxxxxxxx
+
+[influxdb]
+url = influxdb.domain.tld
+port = 8086
+ssl = false
+verify_ssl = false
+username = root
+password = root
+
+[tautulli-1]
+url = tautulli.domain.tld:8181
+fallback_ip = 1.1.1.1
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_activity = true
+get_activity_run_seconds = 30
+get_stats = true
+get_stats_run_seconds = 3600
+
+[sonarr-1]
+url = sonarr1.domain.tld:8989
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+missing_days = 7
+missing_days_run_seconds = 300
+future_days = 1
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[sonarr-2]
+url = sonarr2.domain.tld:8989
+apikey = yyyyyyyyyyyyyyyy
+ssl = false
+verify_ssl = false
+missing_days = 7
+missing_days_run_seconds = 300
+future_days = 1
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[radarr-1]
+url = radarr1.domain.tld
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+queue = true
+queue_run_seconds = 300
+get_missing = true
+get_missing_run_seconds = 300
+
+[radarr-2]
+url = radarr2.domain.tld
+apikey = yyyyyyyyyyyyyyyy
+ssl = false
+verify_ssl = false
+queue = true
+queue_run_seconds = 300
+get_missing = true
+get_missing_run_seconds = 300
+
+[lidarr-1]
+url = lidarr1.domain.tld:8686
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+missing_days = 30
+missing_days_run_seconds = 300
+future_days = 30
+future_days_run_seconds = 300
+queue = true
+queue_run_seconds = 300
+
+[ombi-1]
+url = ombi.domain.tld
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_request_type_counts = true
+request_type_run_seconds = 300
+get_request_total_counts = true
+request_total_run_seconds = 300
+get_issue_status_counts = true
+issue_status_run_seconds = 300
+
+[sickchill-1]
+url = sickchill.domain.tld:8081
+apikey = xxxxxxxxxxxxxxxx
+ssl = false
+verify_ssl = false
+get_missing = true
+get_missing_run_seconds = 300
+
+[unifi-1]
+url = unifi.domain.tld:8443
+username = ubnt
+password = ubnt
+site = default
+usg_name = MyRouter
+ssl = false
+verify_ssl = false
+get_usg_stats_run_seconds = 300
+</code></pre></div>
+</details>
+<h6 id="influxdb">InfluxDB</h6>
+<p>The code block we are interested in for InfluxDB is the following:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>[influxdb]
+<span class="hll">    url = influxdb.domain.tld
+</span>    port = 8086
+    ssl = false
+    verify_ssl = false
+    username = root
+    password = root
+</code></pre></div>
+</td></tr></table>
+<p>We are focusing mainly on line 2 from the code above. You want to enter in the ip address of your IDB instance. If you are running everything on the same machine, you should be able to use <code>localhost</code> or <code>127.0.0.1</code> for the IP address.</p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><mark>2</mark></td>
+<td><mark><em>IP</em></mark></td>
+<td><mark>Change to the IP address of your IDB instance</mark></td>
+</tr>
+<tr>
+<td>3</td>
+<td>8086</td>
+<td>Change to your IDB port. 8086 is default.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>root</td>
+<td>If you have IDB set up with authentication, you put the username here. <a href="./#authentication">More Info</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>root</td>
+<td>If you have IDB set up with authentication, you put the password here. <a href="./#authentication">More Info</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h6 id="tautulli">Tautulli</h6>
+<p>The next block we are going to take a look at is the <code>tautulli-1</code> block:</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [tautulli-1]
+<span class="hll">    url = tautulli.domain.tld:8181
+</span><span class="hll">    fallback_ip = 1.1.1.1
+</span><span class="hll">    apikey = xxxxxxxxxxxxxxxx
+</span>    ssl = false
+    verify_ssl = false
+    get_activity = true
+    get_activity_run_seconds = 30
+    get_stats = true
+    get_stats_run_seconds = 3600
+</code></pre></div>
+</td></tr></table>
+We are focusing on lines 2-4 from the code above. If you are hosting Varken on the same computer that you are hosting Tautulli on, you should be able to use <code>localhost</code> or <code>127.0.0.1</code> for the IP address.</p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Input</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><mark>2</mark></td>
+<td><mark>url</mark></td>
+<td><mark><em>IP:port</em></mark></td>
+<td><mark>Change to the IP address and port of your Tautulli instance. Default port is 8181</mark></td>
+</tr>
+<tr>
+<td><mark>3</mark></td>
+<td><mark>fallback_ip</mark></td>
+<td><mark><em>Your public IP</em></mark></td>
+<td><mark>You should change this to your public IP address.<sup>1</sup></mark></td>
+</tr>
+<tr>
+<td><mark>4</mark></td>
+<td><mark>apikey</mark></td>
+<td><mark><em>Enter API key</em></mark></td>
+<td><mark>Enter in your Tautulli API key<sup>2</sup>. Replace all the x's</mark></td>
+</tr>
+<tr>
+<td>5</td>
+<td>ssl</td>
+<td>false</td>
+<td>Set to true if you are using SSL to access Tautulli. If you are using it over a local network, you can leave this false.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>verify_ssl</td>
+<td>false</td>
+<td>Set to true if you are using SSL to access Tautulli. If you are using it over a local network, you can leave this false.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>get_activity</td>
+<td>true</td>
+<td>Pull stream information from Tautulli.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>get_activity_run_seconds</td>
+<td>30</td>
+<td>How often in seconds to pull activity from Tautulli.<br />Default = 30</td>
+</tr>
+<tr>
+<td>9</td>
+<td>get_stats</td>
+<td>true</td>
+<td>Pull library information from Tautulli.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>get_stats_run_seconds</td>
+<td>3600</td>
+<td>How often in seconds to pull stats from Tautulli.<br />Default = 3600 (5 min)</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>: For <code>fallback_ip</code>, you should use your public IP address. According to the <a href="https://wiki.cajun.pro/books/varken/page/breakdown#bkmrk-%5Btautulli-%3Cserver-id">Varken Documentation</a>, the <code>fallback_ip</code> is used for location lookup when there is a failure to determine a location which generally happens when streaming over your local network. You can get your IP address by visiting <a href="https://whatismyipaddress.com/">WhatIsMyIP.com</a>. Note: If you are using a VPN, it will use the location your VPN is connected to.</p>
+<p><sup>2</sup>: You can obtain your Tautulli API key by navigating to your Tautulli instance. Go to <strong>Settings</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"/></svg></span> in upper right &gt; Settings) &gt; <strong>Web Interface</strong> &gt; <strong>API Key</strong>. Replace the "xxxxxxxxxxxxxxxx" with your API key.</p>
+<hr />
+<h6 id="global-configuration">Global Configuration</h6>
+<p>Now that we have all of our applications set up to use UUD, we need to configure the global configuration.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [global]
+    sonarr_server_ids = 1,2
+    radarr_server_ids = 1,2
+    lidarr_server_ids = false
+<span class="hll">    tautulli_server_ids = 1
+</span>    ombi_server_ids = 1
+    sickchill_server_ids = false
+    unifi_server_ids = false
+<span class="hll">    maxmind_license_key = xxxxxxxxxxxxxxxx
+</span></code></pre></div>
+</td></tr></table>
+<p>The two lines we are focusing on are lines 5 and 9. </p>
+<table>
+<thead>
+<tr>
+<th>Line #</th>
+<th>Setting</th>
+<th>Input</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>tautulli_server_ids</td>
+<td>1</td>
+<td>We can leave this line alone</td>
+</tr>
+<tr>
+<td>9</td>
+<td>maxmind_license_key</td>
+<td><em>MaxMind license key</em></td>
+<td>Enter in the MaxMind license key that you obtained in <a href="./#obtain-maxminddb-key">#Obtain MaxMindDB License Key</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>For the rest of the settings, we need to disable the rest of the services unless you have set them up.</p>
+<p>To disable the rest of the services, replace all of the numbers following them with <strong><code>false</code></strong>.</p>
+<p>In the end, your global configuration should look along the lines of:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    [global]
+    sonarr_server_ids = false
+    radarr_server_ids = false
+    lidarr_server_ids = false
+    tautulli_server_ids = 1
+    ombi_server_ids = false
+    sickchill_server_ids = false
+    unifi_server_ids = false
+    maxmind_license_key = xxxxxxxxxxxxxxxx
+</code></pre></div>
+</td></tr></table>
+<h4 id="final-configuration-file">Final Configuration File</h4>
+<p>When you complete everything above, save the file. Now you can <a href="./#start-the-container_1">start the container</a>.</p>
+<h4 id="start-the-container_3">Start the Container</h4>
+<p>Now that you have your configuration file set and in the proper place, we can go back to the container creation screen of Varken and click <strong>Apply</strong> to create and start the container.</p>
+<hr />
+<h3 id="ultimate-unriad-dashboard">Ultimate UNRIAD Dashboard</h3>
+<div class="admonition error">
+<p class="admonition-title">TODO</p>
+<p>Find out if we are using github to distribute files or the unRAID forums</p>
+</div>
+<p>Go to the <a href="https://forums.unraid.net/topic/96895-ultimate-unraid-dashboard-uud/?tab=comments#comment-892859">Ultimate unRAID Dashboard forum Topic</a> and scroll to the bottom of the first post. You will see a file attachment for VERSION 1.5. Click on the file attachment to download the JSON file.</p>
+<p>Right click on <a href="https://raw.githubusercontent.com/LilTrublMakr/Ultimate-UNRAID-Dashboard/main/v1.5/Version%201.5%20-%202020-12-31%20(falconexe).json">this link</a> and click "Save target as..."</p>
+<h4 id="configuring-grafana">Configuring Grafana</h4>
+<p>In the <strong>Docker</strong> tab in unRAID, click on the <strong>Grafana</strong> icon and then select <strong>WebUI</strong>.</p>
+<p><img alt="grafana_03.png" src="../../img/grafana_03.png" /></p>
+<p>When you are asked to log in, the default user is "<strong><code>admin</code></strong>" and the password is the one you set up while <a href="#settings_2">setting up Grafana</a>.</p>
+<h4 id="adding-data-sources">Adding Data Sources</h4>
+<p>In the left menu, hover over the cog icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg></span>) and then click on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"/></svg></span> <strong>Data Sources</strong>.</p>
+<p><img alt="grafana_04.png" src="../../img/grafana_04.png" /></p>
+<p>On the screen that opens up, click on <strong>Add Data Source</strong>.</p>
+<p><img alt="grafana_05.png" src="../../img/grafana_05.png" /></p>
+<p>On the next screen, select "InfluxDB".</p>
+<p><img alt="grafana_06.png" src="../../img/grafana_06.png" /></p>
+<h5 id="telegraf">Telegraf</h5>
+<p>Fill in the settings. If the setting is not in the table below, you can leave it default.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>InfluxDB</td>
+<td>You can name this what you want. I suggest InfluxDB or Telegraf</td>
+</tr>
+<tr>
+<td>Query Language</td>
+<td>InfluxQL</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><span style="color: var(--uud-green)">HTML</span></td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://localhost:8686</td>
+<td>Set this to the IP address of your server</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><span style="color: var(--uud-green)">InfluxDB Details</span></td>
+</tr>
+<tr>
+<td>Database</td>
+<td>telegraf</td>
+<td>Case sensitive</td>
+</tr>
+<tr>
+<td>User</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your username if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your password if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+</tbody>
+</table>
+<p>Click on the <strong>Save &amp; Test</strong> button and make sure you get a green bar just above saying <strong>Data source is working</strong>.</p>
+<p><img alt="grafana_07.png" src="../../img/grafana_07.png" /></p>
+<p><img alt="grafana_08.png" src="../../img/grafana_08.png" /></p>
+<p>Next, either click on the <strong>Back</strong> button or go to the left side of the screen, hover over the cog icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg></span>) and then click on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"/></svg></span> <strong>Data Sources</strong>. Click on <strong>Add data source</strong>.</p>
+<h5 id="varken">Varken</h5>
+<p>Fill in the settings. If the setting is not in the table below, you can leave it default.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Varken</td>
+<td>You can name this what you want. I suggest Varken</td>
+</tr>
+<tr>
+<td>Query Language</td>
+<td>InfluxQL</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><span style="color: var(--uud-green)">HTML</span></td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://localhost:8686</td>
+<td>Set this to the IP address of your server</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><span style="color: var(--uud-green)">InfluxDB Details</span></td>
+</tr>
+<tr>
+<td>Database</td>
+<td>varken</td>
+<td>Case sensitive</td>
+</tr>
+<tr>
+<td>User</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your username if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><ins>Leave Blank</ins></td>
+<td>Put in your password if you set one up. Setting one up is beyond the scope of this guide.</td>
+</tr>
+</tbody>
+</table>
+<p>Click on the <strong>Save &amp; Test</strong> button and make sure you get a green bar just above saying <strong>Data source is working</strong>.</p>
+<p><img alt="grafana_09.png" src="../../img/grafana_09.png" /></p>
+<p><img alt="grafana_08.png" src="../../img/grafana_08.png" /></p>
+<h4 id="uploading-uud">Uploading UUD</h4>
+<p>On the left side of the screen, hover over the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg></span> icon and then click on the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg></span> <strong>Import</strong> button.</p>
+<p><img alt="grafana_10.png" src="../../img/grafana_10.png" /></p>
+<p>Select the json file you downloaded <a href="#ultimate-unriad-dashboard">here</a>. If you want to rename your dashboard, now is the time to do it. Otherwise, click <strong>Import</strong>.</p>
+<p><img alt="grafana_11.png" src="../../img/grafana_11.png" /></p>
+<p>You should now be directed to your new dashboard!</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../README15/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              News
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../1.4.0/install14/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Install
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; falconexe
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://forums.unraid.net/topic/96895-ultimate-unraid-dashboard-uud/" target="_blank" rel="noopener" title="UNRAID Forum Topic" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M532 386.2c27.5-27.1 44-61.1 44-98.2 0-80-76.5-146.1-176.2-157.9C368.3 72.5 294.3 32 208 32 93.1 32 0 103.6 0 192c0 37 16.5 71 44 98.2-15.3 30.7-37.3 54.5-37.7 54.9-6.3 6.7-8.1 16.5-4.4 25 3.6 8.5 12 14 21.2 14 53.5 0 96.7-20.2 125.2-38.8 9.2 2.1 18.7 3.7 28.4 4.9C208.1 407.6 281.8 448 368 448c20.8 0 40.8-2.4 59.8-6.8C456.3 459.7 499.4 480 553 480c9.2 0 17.5-5.5 21.2-14 3.6-8.5 1.9-18.3-4.4-25-.4-.3-22.5-24.1-37.8-54.8zm-392.8-92.3L122.1 305c-14.1 9.1-28.5 16.3-43.1 21.4 2.7-4.7 5.4-9.7 8-14.8l15.5-31.1L77.7 256C64.2 242.6 48 220.7 48 192c0-60.7 73.3-112 160-112s160 51.3 160 112-73.3 112-160 112c-16.5 0-33-1.9-49-5.6l-19.8-4.5zM498.3 352l-24.7 24.4 15.5 31.1c2.6 5.1 5.3 10.1 8 14.8-14.6-5.1-29-12.3-43.1-21.4l-17.1-11.1-19.9 4.6c-16 3.7-32.5 5.6-49 5.6-54 0-102.2-20.1-131.3-49.7C338 339.5 416 272.9 416 192c0-3.4-.4-6.7-.7-10C479.7 196.5 528 238.8 528 288c0 28.7-16.2 50.6-29.7 64z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>
